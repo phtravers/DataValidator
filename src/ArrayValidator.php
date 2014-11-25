@@ -89,9 +89,9 @@ class ArrayValidator {
      * @param $minimum
      * @param $maximum
      *
-     * @return bool
+     * @return boo
      *
-     * @throws \Exceptio
+     * @throws \Exception
      */
     public static function arrayBetween($array, $minimum, $maximum)
     {
