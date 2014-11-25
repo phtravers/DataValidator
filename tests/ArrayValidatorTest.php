@@ -10,6 +10,9 @@ use \OKLM\DataValidator\ArrayValidator;
 class ArrayValidatorTest extends \PHPUnit_Framework_TestCase {
 
 
+    /**
+     *
+     */
     public function testArrayIsEmpty()
     {
         $array = array();
