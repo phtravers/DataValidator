@@ -9,4 +9,6 @@
 
 require __DIR__.'/vendor/autoload.php';
 
-echo \OKLM\DataValidator\Pair::isPair(2);
+echo \OKLM\DataValidator\IntegerValidator::equal(2, 2);
+
+echo \OKLM\DataValidator\IntegerValidator::equal(2, 2);
