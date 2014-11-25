@@ -12,4 +12,4 @@ tools:
 
 filter:
     paths: [src/*]
-    excluded_pa
+    excluded_paths: [vendor/*, tests/*]
