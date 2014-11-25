@@ -14,11 +14,11 @@ namespace OKLM\DataValidator;
  */
 class ArrayValidator {
 
-    const LENGTH_EQUAL = 0;
-    const LENGTH_INFERIOR = 1;
-    const LENGTH_SUPERIOR = 2;
-    const LENGTH_INFERIOR_OR_EQUAL = 3;
-    const LENGTH_SUPERIOR_OR_EQUAL = 4;
+    const EQUAL = 0;
+    const INFERIOR = 1;
+    const SUPERIOR = 2;
+    const INFERIOR_OR_EQUAL = 3;
+    const SUPERIOR_OR_EQUAL = 4;
 
     /**
      * @param $array
@@ -53,30 +53,30 @@ class ArrayValidator {
         if(!is_array($array) || !is_int($number))
             throw new \Exception('parameter is not an array or an integer');
         if (!in_array($comparator, [
-            self::LENGTH_EQUAL,
-            self::LENGTH_INFERIOR,
-            self::LENGTH_SUPERIOR,
-            self::LENGTH_SUPERIOR_OR_EQUAL,
-            self::LENGTH_INFERIOR_OR_EQUAL,
+            self::EQUAL,
+            self::INFERIOR,
+            self::SUPERIOR,
+            self::SUPERIOR_OR_EQUAL,
+            self::INFERIOR_OR_EQUAL,
         ])) {
             throw new \Exception('The second parameter is not accepted');
         }
         $arrayLength = count($array);
         $result = 0;
         switch ($comparator) {
-            case self::LENGTH_EQUAL:
+            case self::EQUAL:
                 $result = $arrayLength === $number;
                 break;
-            case self::LENGTH_INFERIOR:
+            case self::INFERIOR:
                 $result = $arrayLength < $number;
                 break;
-            case self::LENGTH_SUPERIOR:
+            case self::SUPERIOR:
                 $result = $arrayLength > $number;
                 break;
-            case self::LENGTH_INFERIOR_OR_EQUAL:
+            case self::INFERIOR_OR_EQUAL:
                 $result = $arrayLength <= $number;
                 break;
-            case self::LENGTH_SUPERIOR_OR_EQUAL:
+            case self::SUPERIOR_OR_EQUAL:
                 $result = $arrayLength >= $number;
                 break;
         }

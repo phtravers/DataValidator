@@ -31,42 +31,42 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase {
     public function testArrayIsEqualTo()
     {
         $array = array('Tulipe' => 1);
-        $boolean = ArrayValidator::compareOperator($array, ArrayValidator::LENGTH_EQUAL, 1);
+        $boolean = ArrayValidator::compareOperator($array, ArrayValidator::EQUAL, 1);
         $this->assertTrue($boolean);
     }
 
     public function testArrayIsNotEqualTo()
     {
         $array = array('Tulipe' => 1);
-        $boolean = ArrayValidator::compareOperator($array, ArrayValidator::LENGTH_EQUAL, 3);
+        $boolean = ArrayValidator::compareOperator($array, ArrayValidator::EQUAL, 3);
         $this->assertFalse($boolean);
     }
 
     public function testArrayIsInferior()
     {
         $array = array('Tulipe' => 1, 'Rose' => 4);
-        $boolean = ArrayValidator::compareOperator($array, ArrayValidator::LENGTH_INFERIOR, 10);
+        $boolean = ArrayValidator::compareOperator($array, ArrayValidator::INFERIOR, 10);
         $this->assertTrue($boolean);
     }
 
     public function testArrayIsSuperior()
     {
         $array = array('Tulipe' => 2, 'Rose' => 4);
-        $boolean = ArrayValidator::compareOperator($array, ArrayValidator::LENGTH_SUPERIOR, 1);
+        $boolean = ArrayValidator::compareOperator($array, ArrayValidator::SUPERIOR, 1);
         $this->assertTrue($boolean);
     }
 
     public function testArrayIsInferiorOrEqual()
     {
         $array = array('Tulipe' => 2, 'Rose' => 4);
-        $boolean = ArrayValidator::compareOperator($array, ArrayValidator::LENGTH_INFERIOR_OR_EQUAL, 2);
+        $boolean = ArrayValidator::compareOperator($array, ArrayValidator::INFERIOR_OR_EQUAL, 2);
         $this->assertTrue($boolean);
     }
 
     public function testArrayIsSuperiorOrEqual()
     {
         $array = array('Tulipe' => 2, 'Rose' => 4);
-        $boolean = ArrayValidator::compareOperator($array, ArrayValidator::LENGTH_SUPERIOR_OR_EQUAL, 2);
+        $boolean = ArrayValidator::compareOperator($array, ArrayValidator::SUPERIOR_OR_EQUAL, 2);
         $this->assertTrue($boolean);
     }
 
