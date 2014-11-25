@@ -7,12 +7,12 @@ This library can validate different kind of data.
 ## Integer Validator
 
 You can valid different cases :
-1) if two integers are equal
-2) if one if superior to an other
-3) if one if inferior to an other
-4) if one integer is beetween two others
-5) if an integer is negative
-6) if an integer is positive
+if two integers are equal,
+if one if superior to an other,
+if one if inferior to an other,
+if one integer is beetween two others,
+if an integer is negative,
+if an integer is positive.
 
 ```php
 require __DIR__.'/vendor/autoload.php';
@@ -22,30 +22,44 @@ echo OKLM\DataValidator\IntegerValidator::equal(2,2);
 
 ## String Validator
 
-This lib generates Lorem Ipsum texts in a random order.
+This lib valid strings in somes conditions :
+if a string is equal to a length,
+if a string is superior to a length,
+if a string is inferior to a length,
+if a string is between two length Integer,
+If a string owns whitespace at the start and before the end,
+If a string owns whitespace,
+
 
 ```php
 require __DIR__.'/vendor/autoload.php';
 
-echo \OKLM\StringGenerator\LoremGenerator::generate(30);
+echo OKLM\DataValidator\StringValidator::lengthValidator($string, 3);
+```
 
 ## Boolean Validator
 
-This lib generates Lorem Ipsum texts in a random order.
+This lib valid boolean in somes conditions :
+if a boolean is true,
+if a boolean is false,
 
 ```php
 require __DIR__.'/vendor/autoload.php';
 
-echo \OKLM\StringGenerator\LoremGenerator::generate(30);
+echo OKLM\DataValidator\BooleanValidator::true($boolean);
 ```
 
 ## Array Validator
 
-This lib generates Lorem Ipsum texts in a random order.
+This lib valid arrays in somes conditions :
+if an array is empty,
+Compore an array if differents operators,
+if a specific key exists into an array,
+if a specific value exists into an array
 
 ```php
 require __DIR__.'/vendor/autoload.php';
 
-echo \OKLM\StringGenerator\LoremGenerator::generate(30);
+echo OKLM\DataValidator\ArrayValidator::($array, OKLM\DataValidator\ArrayValidator::EQUAL, 3);
 
 
